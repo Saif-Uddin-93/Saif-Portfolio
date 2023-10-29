@@ -1,39 +1,7 @@
 * {
   box-sizing: border-box;
-  border: 1px solid;
-  border-color: red;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.5;
-}
-
-.hero-banner
-{
-  background-image: url("../images/02-hero-bg.jpg");
-  height: 15vh;
-
-}
-/* 
-.hero-banner {
-  display: flex;
-}
-
-.hero-banner h2 {
-  justify-content: flex-end;
-  align-items: flex-end;
-} */
-
-.flex-container {
-  display: flex;
-}
-
-.flex-BRcorner {
-  justify-content: flex-end;
-  align-items: flex-end;
+  /* border: 1px solid; */
+  /* border-color: red; */
 }
 
 h1,
@@ -45,6 +13,75 @@ h6 {
   margin: 0;
 }
 
-p {
-  margin: 0;
+.flex-container {
+  display: flex;
+  margin: 10px;
+/*   height: 100%; */
+/*   width: auto; */
+  align-items: center;
 }
+
+main h2{
+  border-right: solid red;
+  padding-right: 10px;
+  margin-right: 10px;
+  flex-basis: 20%;
+  text-align: end;
+  max-width: 150px;
+  height: fit-content;
+  font-size: 32px;
+  /* overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto; */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+body nav{
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-right: 20px;
+}
+
+.hero-banner
+{
+  background-image: url("../images/02-hero-bg.jpg");
+  height: 20vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(68, 155, 212, 0.5);
+  background-blend-mode: multiply;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.hero-caption
+{
+  display: flex;
+  justify-content: center;
+  padding: 0px 10px;
+  background-color: aqua;
+}
+
+.hero-caption h2{
+  width: fit-content;
+  border-right: 0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* .about{
+  height: 100px;
+  width: 1000px;
+} */
