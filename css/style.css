@@ -1,7 +1,12 @@
+:root{
+  --header-dark-color: rgb(56, 57, 64);
+  --header-light-color: rgb(137, 194, 194);
+  --content-font-color: rgb(78, 108, 108);
+}
+
 * {
   box-sizing: border-box;
-  /* border: 1px solid; */
-  /* border-color: red; */
+  /* border: solid red; */
 }
 
 h1,
@@ -13,51 +18,43 @@ h6 {
   margin: 0;
 }
 
-.flex-container {
+header{
   display: flex;
-  margin: 10px;
-/*   height: 100%; */
-/*   width: auto; */
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  background-color: var(--header-dark-color);
+  color: var(--header-dark-color);
 }
 
-main h2{
-  border-right: solid red;
+a{
+  text-decoration: none;
+}
+
+header a {
+  color: var(--header-light-color);
+  border-bottom: solid var(--header-light-color);
+}
+
+h1{
+  padding-left: 50px;
   padding-right: 10px;
-  margin-right: 10px;
-  flex-basis: 20%;
-  text-align: end;
-  max-width: 150px;
-  height: fit-content;
-  font-size: 32px;
-  /* overflow-wrap: break-word;
-  word-wrap: break-word;
-  hyphens: auto; */
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.5;
-}
-
-body nav{
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  padding-right: 20px;
+  margin-top: -8px;
+  margin-bottom: 10px;
+  background-color: var(--header-light-color);
 }
 
 .hero-banner
 {
+  position: relative;
   background-image: url("../images/02-hero-bg.jpg");
   height: 20vh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-color: rgba(68, 155, 212, 0.5);
-  background-blend-mode: multiply;
+  /* background-color: rgba(68, 155, 212, 0.5); */
+  /* background-blend-mode: multiply; */
   margin: 0;
   display: flex;
   width: 100%;
@@ -65,12 +62,25 @@ body nav{
   justify-content: flex-end;
 }
 
+.hero-banner::before{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    rgba(0, 150, 255, 0.3) 0%,
+    rgba(0, 150, 255, 0.6) 100%);
+}
+
 .hero-caption
 {
   display: flex;
   justify-content: center;
   padding: 0px 10px;
-  background-color: aqua;
+  background-color: var(--header-light-color);
+  margin-bottom: 20px;
+  margin-right: 75px;
+  z-index: 1;
 }
 
 .hero-caption h2{
@@ -81,7 +91,125 @@ body nav{
   padding: 0;
 }
 
-/* .about{
+header nav{
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-right: 20px;
+}
+
+main h2{
+  padding-right: 10px;
+  margin: 0px 30px;
+  flex-basis: 20%;
+  text-align: end;
+  max-width: 150px;
+  height: 100%;
+  font-size: 32px;
+  border-right: solid var(--content-font-color);
+  /* overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto; */
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+  color: var(--content-font-color);
+}
+
+.content{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  /* align-items: flex-start; */
+  /* flex-direction: row;
+  flex-wrap: wrap; */
+  /* flex: 1; */
+  margin: 30px 0px;
+}
+
+#about-content, #work-content, #contact-content{
+  max-width: 75vw;
+  height: 100%;
+  /* height: inherit; */
+  /* padding-left: 30px; */
+  /* border-left: solid var(--content-font-color); */
+  margin: 0;
+}
+
+#contact-content{
+  padding: 0;
+}
+
+.contact-type{
+  border-bottom: solid var(--content-font-color);
+  color: var(--content-font-color);
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-grow: 0;
+  flex-direction: column;
+}
+
+.container {
+  text-align: center;
+}
+
+.python, .art, .uni {
+  border: solid red;
   height: 100px;
-  width: 1000px;
-} */
+  width: 100px;
+}
+
+.python {
+  height: 300px;
+  width: 500px;
+  max-width: 75vw;
+}
+
+main nav{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+main h2
+{
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+}
+
+.number{
+  line-height: 1.1;
+}
+
+.grid_work{
+  display: grid;
+  width: 75%;
+  gap: 1rem;
+}
