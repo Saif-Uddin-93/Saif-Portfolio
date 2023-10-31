@@ -104,15 +104,13 @@ main h2{
   flex-basis: 20%;
   text-align: end;
   max-width: 150px;
-  height: 100%;
+  height: auto;
   font-size: 32px;
   border-right: solid var(--content-font-color);
   /* overflow-wrap: break-word;
   word-wrap: break-word;
   hyphens: auto; */
 }
-
-
 
 body {
   margin: 0;
@@ -165,21 +163,66 @@ html, body {
   flex-direction: column;
 }
 
-.container {
-  text-align: center;
+.grid_work{
+  display: grid;
+  width: 75%;
+  gap: 1rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas: 
+  "python python"
+  "python python"
+  "python python"
+  "art uni"
+  "placeholder-1 placeholder-2"
+  ;
 }
 
-.python, .art, .uni {
+.python{
+  grid-area: python;
+  grid-row: span 3;
+}
+
+.art{
+  grid-area: art;
+}
+
+.uni{
+  grid-area: uni;
+}
+
+.placeholder-1{
+  grid-area: placeholder-1;
+}
+
+.placeholder-2{
+  grid-area: placeholder-2;
+}
+
+/* .python, .art, .uni */.work-content {
   border: solid red;
-  height: 100px;
-  width: 100px;
+  /* height: 100px;
+  width: 100px; */
+  /* display: flex;
+  flex-wrap: wrap; */
 }
 
-.python {
-  height: 300px;
+.python-img {
+  /* height: 300px;
   width: 500px;
-  max-width: 75vw;
+  max-width: 75vw; */
+  background-image: url(https://logos-download.com/wp-content/uploads/2016/10/Python_logo_icon-700x697.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border: solid red;
 }
+
+/* .python-img+{
+
+} */
 
 main nav{
   display: flex;
@@ -206,10 +249,4 @@ ul {
 
 .number{
   line-height: 1.1;
-}
-
-.grid_work{
-  display: grid;
-  width: 75%;
-  gap: 1rem;
 }
