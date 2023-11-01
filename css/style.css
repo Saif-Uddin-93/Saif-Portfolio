@@ -103,10 +103,12 @@ main h2{
   margin: 0px 30px;
   flex-basis: 20%;
   text-align: end;
+  min-width: 125px;
   max-width: 150px;
   height: auto;
   font-size: 32px;
   border-right: solid var(--content-font-color);
+  
   /* overflow-wrap: break-word;
   word-wrap: break-word;
   hyphens: auto; */
@@ -167,19 +169,19 @@ html, body {
   display: grid;
   width: 75%;
   gap: 1rem;
-  grid-auto-columns: 1fr;
   grid-template-areas: 
-  "python python"
-  "python python"
   "python python"
   "art uni"
   "placeholder-1 placeholder-2"
   ;
+  grid-template-rows: 3fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr
 }
 
 .python{
   grid-area: python;
-  grid-row: span 3;
+  /* grid-row: span 3; */
+  /* height: 200px; */
 }
 
 .art{
@@ -217,7 +219,7 @@ html, body {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  border: solid red;
+  height: 100%;
 }
 
 /* .python-img+{
@@ -232,12 +234,6 @@ main nav{
   justify-content: space-evenly;
 }
 
-main h2
-{
-  align-self: stretch;
-  flex-grow: 1;
-}
-
 ul {
   display: flex;
   justify-content: space-evenly;
@@ -249,4 +245,5 @@ ul {
 
 .number{
   line-height: 1.1;
+  font-size: 14px;
 }
