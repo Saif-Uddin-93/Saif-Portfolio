@@ -1,12 +1,12 @@
 :root{
   --header-dark-color: rgb(56, 57, 64);
-  --header-light-color: rgb(137, 194, 194);
+  --header-light-color: rgb(146, 210, 210);
   --content-font-color: rgb(78, 108, 108);
+  --content-bg: rgb(201, 229, 229);
 }
 
 * {
   box-sizing: border-box;
-  /* border: solid red; */
 }
 
 h1,
@@ -35,6 +35,21 @@ a{
 header a {
   color: var(--header-light-color);
   border-bottom: solid var(--header-light-color);
+  padding: 0px 0.5em;
+}
+
+a h3
+{
+  background-color: var(--header-light-color);
+  color: var(--header-dark-color);
+  margin-bottom: 1em;
+  padding: 0.25em;
+}
+
+h3 p
+{
+  margin: 0;
+  font-size: 0.75em;
 }
 
 h1{
@@ -180,8 +195,6 @@ html, body {
 
 .python{
   grid-area: python;
-  /* grid-row: span 3; */
-  /* height: 200px; */
 }
 
 .art{
@@ -201,11 +214,8 @@ html, body {
 }
 
 /* .python, .art, .uni */.work-content {
-  border: solid red;
-  /* height: 100px;
-  width: 100px; */
-  /* display: flex;
-  flex-wrap: wrap; */
+  border: solid 0.2em var(--header-light-color);
+  background-color: var(--content-bg);
 }
 
 .python-img {
@@ -217,14 +227,10 @@ html, body {
   background-size: contain;
   background-position-x: center;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: flex-end;
   height: 100%;
 }
-
-/* .python-img+{
-
-} */
 
 main nav{
   display: flex;
