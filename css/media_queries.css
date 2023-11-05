@@ -1,0 +1,12 @@
+@media (width < 1000px)
+{
+    .art-img {
+        background-image: url(https://cdn.crevado.com/images/crevado-logo-new.png);
+        background-repeat: no-repeat;
+        background-size: auto 50%;
+        background-position-x: center;
+        background-position-y: center;
+        display: flex;
+        height: 100%;
+      }
+}
