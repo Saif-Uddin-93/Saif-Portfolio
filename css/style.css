@@ -21,6 +21,7 @@ h6 {
 
 header{
   display: flex;
+  flex-grow: 0;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -42,7 +43,7 @@ header a {
 a h3
 {
   background-color: var(--content-caption-bg);
-  color: var(--header-dark-color);
+  color: rgb(56, 57, 64);
   margin-bottom: 1em;
   padding: 0.25em;
 }
@@ -84,8 +85,8 @@ h1{
   height: 100%;
   width: 100%;
   background: linear-gradient(
-    rgba(0, 150, 255, 0.3) 0%,
-    rgba(0, 150, 255, 0.6) 100%);
+    rgba(54, 182, 242, 0.4) 0%,
+    rgba(2, 63, 108, 0.8) 100%);
 }
 
 .hero-caption
@@ -111,7 +112,7 @@ header nav{
   display: flex;
   justify-content: flex-end;
   gap: 10px;
-  padding-right: 20px;
+  padding-right: 10%;
 }
 
 main h2{
@@ -119,12 +120,11 @@ main h2{
   margin: 0px 30px;
   flex-basis: 20%;
   text-align: end;
-  min-width: 125px;
+  min-width: 150px;
   max-width: 150px;
   height: auto;
   font-size: 32px;
   border-right: solid var(--content-font-color);
-  
   /* overflow-wrap: break-word;
   word-wrap: break-word;
   hyphens: auto; */
@@ -180,7 +180,7 @@ html, body {
 
 .grid_work{
   display: grid;
-  width: 75%;
+  width: 75vw;
   gap: 1rem;
   grid-template-areas: 
   "uni uni"
@@ -188,7 +188,7 @@ html, body {
   "hacker-rank link-tree"
   ;
   grid-template-rows: 3fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr
+  grid-template-columns: 1fr 1fr;
 }
 
 .python{
