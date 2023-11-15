@@ -3,7 +3,10 @@
   --header-light-color: rgb(146, 210, 210);
   --content-font-color: rgb(78, 108, 108);
   --content-bg: rgb(201, 229, 229);
-  --content-caption-bg: rgba(146, 210, 210, 0.5);
+  --content-caption-bg: rgba(146, 210, 210, 0.8);
+  --navbar-hover-color: rgba(146, 210, 210, 0.4);
+  --navbar-active-color: rgb(94, 149, 149);
+  --contact-link-color: rgb(57, 92, 198);;
 }
 
 * {
@@ -19,14 +22,13 @@ h6 {
   margin: 0;
 }
 
-.highlighted-words
-  {
+.highlighted-words {
     background-color: rgba(255, 251, 0, 0.6);
     /* color: rgb(10, 161, 161); */
     color: rgb(5, 151, 151);
   }
 
-header{
+header {
   display: flex;
   flex-grow: 0;
   justify-content: space-between;
@@ -35,6 +37,16 @@ header{
   margin-bottom: 10px;
   background-color: var(--header-dark-color);
   color: var(--header-dark-color);
+}
+
+.nav-link:hover {
+  color: var(--navbar-hover-color);
+  border-bottom: solid var(--navbar-hover-color);
+}
+
+.active {
+  color: var(--navbar-active-color);
+  border-bottom: solid var(--navbar-active-color);
 }
 
 a{
@@ -101,7 +113,7 @@ h1{
   /* position: relative; */
   justify-self: center;
   align-self: center;
-  background-image: url(/Images/profile-pic.jpg);
+  background-image: url(../images/profile-pic.jpg);
   height: 18vh;
   width: 18vh;
   /* margin-top: 1vh; */
@@ -190,6 +202,11 @@ body {
   color: var(--content-font-color);
   margin: 0;
   padding: 0;
+}
+
+.contact-type:hover {
+  border-bottom: solid var(--contact-link-color);
+  color: var(--contact-link-color);
 }
 
 html, body {
