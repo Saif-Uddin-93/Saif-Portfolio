@@ -94,8 +94,9 @@ h1{
   margin: 0;
   display: flex;
   width: 100%;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .hero-banner::before{
@@ -104,19 +105,19 @@ h1{
   height: 100%;
   width: 100%;
   background: linear-gradient(
-    rgba(54, 182, 242, 0.4) 0%,
-    rgba(2, 63, 108, 0.8) 100%);
+    rgba(54, 182, 242, 0.35) 0%,
+    rgba(0, 100, 170, 0.8) 100%);
 }
 
 .profile-pic
 {
   /* position: relative; */
-  justify-self: center;
-  align-self: center;
+  /* justify-self: center;
+  align-self: center; */
   background-image: url(../images/profile-pic.jpg);
   height: 18vh;
   width: 18vh;
-  /* margin-top: 1vh; */
+  /* margin-bottom: 1vh; */
   margin-left: 15%;
   border-radius: 50%;
   background-repeat: no-repeat;
@@ -128,12 +129,13 @@ h1{
 
 .hero-caption
 {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
+  position: absolute;
   padding: 0px 10px;
   background-color: var(--header-light-color);
-  margin-bottom: 5vh;
-  margin-right: 25%;
+  margin-top: 5vh;
+  left: 50vw;
   z-index: 1;
 }
 

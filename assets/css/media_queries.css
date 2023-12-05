@@ -121,7 +121,42 @@
   }
 }
 
-/* @media (width < 300px)
-{
+@media (width < 426px) {
+  .hero-caption
+  {
+    width: 45%;
+  }
+  .profile-pic
+  {
+    margin-left: 10%;
+  }
+}
 
-} */
+@media(width < 376px)
+{
+  .profile-pic
+  {
+    margin-left: 5%;
+  }
+}
+
+@media (width < 321px) {
+  .hero-caption h2
+  {
+    font-size: 1rem;
+  }
+  .profile-pic
+  {
+    margin-left: 5%;
+    height: 15vh;
+    width: 15vh;
+    background-size: auto 31vh;
+    background-position-y: -7.2vh;
+    background-position-x: -0.7vh;
+  }
+
+  main h2 
+  {
+    margin-left: 0 !important;
+  }
+}
